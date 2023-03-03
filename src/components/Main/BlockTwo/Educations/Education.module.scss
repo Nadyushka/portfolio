@@ -1,0 +1,48 @@
+@import '../../../styles/sass/variables';
+
+.education {
+  padding: 20px;
+  width: 80%;
+  background-color: $mainBackgroundColor;
+  margin-top: 5px;
+
+  h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 25px;
+    margin: 10px 0;
+  }
+
+  div {
+    line-height: 1.2;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  span {
+    background: $accentColor;
+    color: $textColor;
+    font-size: 13px;
+    padding: 1px 8px;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 1px;
+    margin-left: -24px;
+    position: relative;
+    margin-bottom: 9px;
+    height: 25px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      border-top: 5px solid #165934;
+      border-left: 5px solid transparent;
+    }
+  }
+}
+
+
+
+

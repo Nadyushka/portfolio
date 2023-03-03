@@ -1,0 +1,80 @@
+@import '../../styles/sass/variables';
+
+* {
+  box-sizing: border-box;
+
+  .blockFive {
+    padding: 25px 0px;
+    height: 60vh;
+    text-align: left;
+    background-color: $secondBackgroundColor;
+
+    @media (max-width: 1200px) {
+      height: 100%;
+    }
+
+    .blockFive_container {
+      width: 80%;
+      margin: 0px auto;
+      height: 100%;
+
+      @media (max-width: 700px) {
+        width: 90%;
+      }
+
+      .blockFive_sides {
+        display: flex;
+        flex-wrap: wrap;
+
+        h4 {
+          font-weight: 500;
+          line-height: 1.2;
+          font-size: 25px;
+          margin: 40px 0 20px;
+        }
+
+        .blockFive_left {
+          flex: 1 1 30%;
+
+          @media (max-width: 700px) {
+            flex: 1 1 50%;
+          }
+        }
+
+        .blockFive_right {
+          flex: 1 1 60%;
+          margin-left: 20px;
+
+          .blockFive_contactArea {
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            margin: 0px auto;
+
+            input {
+              margin: 5px;
+              padding-left: 5px;
+            }
+
+            .input_message {
+              height: 80px;
+            }
+
+            .blockFive_button {
+              margin: 0px 15px 15px 115px;
+              padding: 5px 10px;
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

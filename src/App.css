@@ -1,0 +1,24 @@
+.App {
+    text-align: center;
+    overflow: hidden;
+}
+
+button {
+    margin-top: 50px;
+    color: #fff;
+    box-shadow: 4px 4px #fff;
+    padding: 0 25px;
+    line-height: 42px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none !important;
+    transition: ease all 0.35s;
+    background-color: #2fbf71;
+}
+
+
+

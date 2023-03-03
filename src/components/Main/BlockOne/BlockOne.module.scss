@@ -1,0 +1,119 @@
+@import '../../styles/sass/variables';
+
+.blockOne {
+  padding-bottom: 50px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 10%;
+
+  @media (min-width: 1200px) {
+    height: 100vh;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -20vh;
+    top: -20vh;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 50%;
+    background: $mainBackgroundColor;
+    z-index: -1;
+  }
+
+  .blockOne_container {
+    width: 90%;
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: all 0.5s;
+
+
+    .blockOne_left {
+      flex: 1 1 50%;
+      text-align: left;
+
+      .blockOne_personalInfo {
+
+        margin: 20px 10px 0px;
+        padding: 10px 0px;
+
+        h1 {
+          font-size: 65px;
+          font-weight: 700;
+          line-height: 1;
+          margin: 0 0 20px;
+          color: $textColor;
+        }
+
+        h2 {
+          color: $textColor;
+          font-weight: 500;
+          font-size: 18px;
+          margin-bottom: 25px;
+        }
+
+        h6 {
+          color: $textColor;
+          font-size: 25px;
+          font-weight: 500;
+          margin: 0 0 20px;
+        }
+
+        div {
+          max-width: 450px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .blockOne_right {
+      flex: 1 1 50%;
+      margin-bottom: 50px;
+
+      .blockOne_button {
+        .blockOne_photo {
+          margin: 10px;
+          object-fit: cover;
+          border-style: none;
+          width: 400px;
+          height: 400px;
+          outline: none !important;
+          border-radius: 100%;
+          transition: all 0.5s;
+
+          @media (max-width: 900px) {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            transition: all 0.5s;
+          }
+
+          @media (max-width: 520px) {
+            margin-top: 30px;
+            margin-bottom: -50px;
+            width: 200px;
+            height: 200px;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
