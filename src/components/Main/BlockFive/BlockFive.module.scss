@@ -43,17 +43,16 @@
 
         .blockFive_right {
           flex: 1 1 60%;
-          margin-left: 20px;
 
           .blockFive_contactArea {
             display: flex;
             flex-direction: column;
             max-width: 350px;
-            margin: 0px auto;
+            margin: auto;
 
             input {
               margin: 5px;
-              padding-left: 5px;
+              padding: 5px 10px;
             }
 
             .input_message {
@@ -61,7 +60,7 @@
             }
 
             .blockFive_button {
-              margin: 0px 15px 15px 115px;
+              margin: 10px 15px 15px 115px;
               padding: 5px 10px;
               width: 150px;
             }
