@@ -5,8 +5,8 @@ import { Fade } from "react-awesome-reveal";
 
 const BlockFive = () => {
   return (
-    <section className={s.blockFive}>
-      <Fade direction={"right"}>
+    <section className={s.blockFive} id={"contactMe"}>
+      <Fade direction={"right"} delay={500} duration={1200}>
         <div className={s.blockFive_container}>
           <BlockTitle title={"GET IN TOUCH."} />
           <div className={s.blockFive_sides}>
@@ -27,10 +27,10 @@ const BlockFive = () => {
                 />
                 <input
                   className={s.input_email}
-                  placeholder={"Email"}
+                  placeholder={"Email "}
                   type={"email"}
                 />
-                <input
+                <textarea
                   className={s.input_message}
                   placeholder={"Your message"}
                 />

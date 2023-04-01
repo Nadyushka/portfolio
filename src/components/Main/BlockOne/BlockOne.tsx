@@ -6,8 +6,8 @@ import ReactTypingEffect from "react-typing-effect";
 
 const BlockOne = () => {
   return (
-    <section className={s.blockOne}>
-      <Fade direction={"right"}>
+    <section className={s.blockOne} id={"aboutMySelf"}>
+      <Fade direction={"right"} delay={500} duration={1200}>
         <div className={s.blockOne_container}>
           <div className={s.blockOne_left}>
             <div className={s.blockOne_personalInfo}>
@@ -21,6 +21,8 @@ const BlockOne = () => {
                   "an energetic",
                   "an excited",
                   "a lively",
+                  "a peppy",
+                  "a high-spirited",
                 ]}
                 speed={100}
                 eraseSpeed={100}
