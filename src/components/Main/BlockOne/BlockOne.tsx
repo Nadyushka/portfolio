@@ -28,7 +28,6 @@ const BlockOne = () => {
                 typingDelay={1000}
               />
               <h2>Frontend Developer</h2>
-              {/*<h2>I am a passionate Frontend Developer</h2>*/}
               <div>
                 My aim is to improve the world by means of using my skills the
                 best way
