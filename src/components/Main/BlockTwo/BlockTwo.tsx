@@ -7,8 +7,8 @@ import { Fade } from "react-awesome-reveal";
 
 const BlockTwo = () => {
   return (
-    <section className={s.blockTwo}>
-      <Fade direction={"right"}>
+    <section className={s.blockTwo} id={"mySkills"}>
+      <Fade direction={"right"} delay={500} duration={1200}>
         <div className={s.blockTwo_container}>
           <BlockTitle title={"EDUCATION & SKILLS"} />
           <div className={s.blockTwo_info}>

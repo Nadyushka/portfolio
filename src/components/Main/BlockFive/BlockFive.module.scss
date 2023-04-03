@@ -57,12 +57,38 @@
 
             .input_message {
               height: 80px;
+              max-width: 350px;
+              margin: 5px;
+              padding: 5px 10px;
+            }
+
+            input, textarea {
+              font-size: 14px;
+              color: $secondBackgroundColor;
+              font-family: 'Roboto', sans-serif;
+              background-color: $secondBackgroundColor;
+              outline: none;
+              border: 1px solid $textColor;
+              cursor: pointer;
+            }
+
+            input:focus, textarea:focus {
+              outline-color: $mainBackgroundColor;
+              color: $textColor;
+              border: 2px solid $textColor;
+            }
+
+            input::placeholder, textarea::placeholder {
+              color: $textColor;
+              font-size: 14px;
+              font-weight: 300;
+              opacity: 0.5;
+              font-family: 'Roboto', sans-serif;
             }
 
             .blockFive_button {
               margin: 10px 15px 15px 115px;
               padding: 5px 10px;
-              width: 150px;
             }
           }
         }

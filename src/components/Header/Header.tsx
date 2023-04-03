@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Header.module.scss";
 import photoImg from "../../assets/pic/photo.jpg";
 import HomeIcon from "@mui/icons-material/Home";
@@ -8,12 +8,23 @@ import PhonelinkIcon from "@mui/icons-material/Phonelink";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import { Link } from "react-scroll";
 
 const sideBarOpenStyle = { left: "0px", zIndex: 100, top: "0px" };
 const sideBarCloseStyle = { zIndex: 100, top: "0px" };
 
 const Header = () => {
+  const activePageLocalStorage = localStorage.getItem("activePage")
+    ? localStorage.getItem("activePage")
+    : "aboutMySelf";
+
+  useEffect(() => {
+    return localStorage.clear();
+  }, []);
+
   const [sideBarOpen, setSideBarOpen] = useState<boolean>(false);
+  const [activePage, setActivePage] = useState<string>(activePageLocalStorage!);
 
   return (
     <header
@@ -48,32 +59,104 @@ const Header = () => {
         <h1>NADYA</h1>
         <nav className={s.header_menu}>
           <ul className={s.header_menuItems}>
-            <li className={s.header_menuItem}>
-              <HomeIcon /> <span>HOME</span>
+            <li
+              className={
+                activePage === "aboutMySelf"
+                  ? `${s.header_menuItem_active} ${s.header_menuItem}`
+                  : `${s.header_menuItem}`
+              }
+            >
+              <HomeIcon className={s.header_menuItemIcon} />{" "}
+              <Link
+                spy={true}
+                smooth={true}
+                duration={500}
+                to={"aboutMySelf"}
+                onClick={() => {
+                  localStorage.setItem("activePage", "aboutMySelf");
+                  setActivePage("aboutMySelf");
+                }}
+              >
+                <span>HOME</span>
+              </Link>
             </li>
-            <li className={s.header_menuItem}>
-              <Face3Icon /> <span>SKILLS</span>
+            <li
+              className={
+                activePage === "mySkills"
+                  ? `${s.header_menuItem_active} ${s.header_menuItem}`
+                  : `${s.header_menuItem}`
+              }
+            >
+              <Link
+                spy={true}
+                smooth={true}
+                duration={500}
+                to={"mySkills"}
+                onClick={() => {
+                  localStorage.setItem("activePage", "mySkills");
+                  setActivePage("mySkills");
+                }}
+              >
+                <Face3Icon className={s.header_menuItemIcon} />{" "}
+                <span>SKILLS</span>
+              </Link>
             </li>
-            <li className={s.header_menuItem}>
-              <ReceiptLongIcon /> <span>PROJECTS</span>
+            <li
+              className={
+                activePage === "myProjects"
+                  ? `${s.header_menuItem_active} ${s.header_menuItem}`
+                  : `${s.header_menuItem}`
+              }
+            >
+              <Link
+                spy={true}
+                smooth={true}
+                duration={500}
+                to={"myProjects"}
+                onClick={() => {
+                  setActivePage("myProjects");
+                  localStorage.setItem("activePage", "myProjects");
+                }}
+              >
+                <ReceiptLongIcon className={s.header_menuItemIcon} />{" "}
+                <span>PROJECTS</span>
+              </Link>
             </li>
-            <li className={s.header_menuItem}>
-              <PhonelinkIcon /> <span>CONTACT ME</span>
+            <li
+              className={
+                activePage === "contactMe"
+                  ? `${s.header_menuItem_active} ${s.header_menuItem}`
+                  : `${s.header_menuItem}`
+              }
+            >
+              <Link
+                spy={true}
+                smooth={true}
+                duration={500}
+                to={"contactMe"}
+                onClick={() => {
+                  setActivePage("contactMe");
+                  localStorage.setItem("activePage", "contactMe");
+                }}
+              >
+                <PhonelinkIcon className={s.header_menuItemIcon} />{" "}
+                <span>CONTACT ME</span>
+              </Link>
             </li>
           </ul>
         </nav>
         <ul className={s.header_socialMedia}>
           <li className={s.header_header_socialMediaItem}>
-            <InstagramIcon />
+            <InstagramIcon className={s.header_socialMediaIcon} />
           </li>
           <li className={s.header_header_socialMediaItem}>
-            <GitHubIcon />
+            <GitHubIcon className={s.header_socialMediaIcon} />
           </li>
           <li className={s.header_header_socialMediaItem}>
-            <LinkedInIcon />
+            <LinkedInIcon className={s.header_socialMediaIcon} />
           </li>
           <li className={s.header_header_socialMediaItem}>
-            <InstagramIcon />
+            <TelegramIcon className={s.header_socialMediaIcon} />
           </li>
         </ul>
       </div>
