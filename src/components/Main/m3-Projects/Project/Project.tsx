@@ -5,6 +5,7 @@ type PropsType = {
     title: string
     description: string
     image: string
+    link: string
 }
 
 const Project = (props: PropsType) => {
@@ -12,7 +13,9 @@ const Project = (props: PropsType) => {
     return (
         <article className={s.project}>
             <div className={s.project_image} style={{backgroundImage: `url(${props.image})`}}>
-                <button>Watch more</button>
+                <a href={props.link} target={'_blank'}>
+                    <button>Watch more</button>
+                </a>
                 <div className={s.project_imageLayout}></div>
             </div>
             <div className={s.project_info}>

@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./BlockFive.module.scss";
+import s from "./ContactMe.module.scss";
 import BlockTitle from "../../commonComponents/BlockTitle";
 import { Fade } from "react-awesome-reveal";
 
-const BlockFive = () => {
+const ContactMe = () => {
   return (
     <section className={s.blockFive} id={"contactMe"}>
       <Fade direction={"right"} delay={500} duration={1200}>
@@ -46,4 +46,4 @@ const BlockFive = () => {
   );
 };
 
-export default BlockFive;
+export default ContactMe;

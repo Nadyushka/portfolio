@@ -20,11 +20,10 @@
     z-index: 1;
     transition: 0.5s;
 
-    &:hover{
+    &:hover {
       transform: scale(110%, 110%);
       transition: 0.5s;
     }
-
 
     button {
       @media (max-width: 400px) {
@@ -41,8 +40,6 @@
       background-color: $borderColor;
       opacity: 0.7;
       z-index: 2;
-
-
     }
 
     button {
@@ -51,8 +48,12 @@
       position: absolute;
       z-index: 5;
       top: 30%;
-      //left: 40%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 

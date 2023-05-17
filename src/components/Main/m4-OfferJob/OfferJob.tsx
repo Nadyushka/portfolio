@@ -1,8 +1,8 @@
 import React from "react";
-import s from "./BlockFour.module.scss";
+import s from "./OfferJob.module.scss";
 import { Fade } from "react-awesome-reveal";
 
-const BlockFour = () => {
+const OfferJob = () => {
   return (
     <section className={s.blockFour}>
       <div className={s.blockFour_container}>
@@ -15,4 +15,4 @@ const BlockFour = () => {
   );
 };
 
-export default BlockFour;
+export default OfferJob;
