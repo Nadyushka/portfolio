@@ -38,7 +38,7 @@ const AboutMe = () => {
                                 best way
                             </div>
                         </div>
-                        <button><a href={cv} download={true} className={s.blockOne_cvLink}>Download CV</a></button>
+                        <a href={cv} download={true} className={s.blockOne_cvLink}><button>Download CV</button></a>
                     </div>
                     <div className={s.blockOne_right}>
                         <div className={s.blockOne_button}>
