@@ -40,6 +40,24 @@
       flex: 1 1 50%;
       text-align: left;
 
+      button {
+        .blockOne_cvLink {
+          color: #fff;
+          text-decoration: none;
+          font-size: 14px;
+          transition: 0.5s all;
+        }
+
+        &:hover {
+          .blockOne_cvLink {
+            color: #2fbf71;
+            font-size: 16px;
+            transition: 0.5s all;
+          }
+        }
+      }
+
+
       .blockOne_personalInfo {
 
         margin: 20px 10px 0px;

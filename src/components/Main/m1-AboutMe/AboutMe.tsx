@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./AboutMe.module.scss";
 import photo from "../../../assets/pic/photo.jpg";
+// @ts-ignore
+import cv from "../../../assets/pic/cv_Baranova.pdf";
 import {Fade} from "react-awesome-reveal";
 import ReactTypingEffect from "react-typing-effect";
 
@@ -36,7 +38,7 @@ const AboutMe = () => {
                                 best way
                             </div>
                         </div>
-                        <button>Download CV</button>
+                        <button><a href={cv} download={true} className={s.blockOne_cvLink}>Download CV</a></button>
                     </div>
                     <div className={s.blockOne_right}>
                         <div className={s.blockOne_button}>

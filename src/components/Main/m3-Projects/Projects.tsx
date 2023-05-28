@@ -15,14 +15,14 @@ const Projects = () => {
                 <div className={s.blockThree_container}>
                     <BlockTitle title={"My projects"}/>
                     <div className={s.blockThree_projects}>
-                        {/*<Project*/}
-                        {/*    title={"ToDoList"}*/}
-                        {/*    description={*/}
-                        {/*        "ToDoList was created with the help of REACT on TS. It is a useful application to manage time. "*/}
-                        {/*    }*/}
-                        {/*    image={toDoPhoto}*/}
-                        {/*    link={}*/}
-                        {/*/>*/}
+                        <Project
+                            title={"ToDoList"}
+                            description={
+                                "ToDoList was created with the help of REACT on TS. It is a useful application to manage time. "
+                            }
+                            image={toDoPhoto}
+                            link={'https://nadyushka.github.io/todoList/'}
+                        />
                         <Project
                             title={"Social Network"}
                             description={

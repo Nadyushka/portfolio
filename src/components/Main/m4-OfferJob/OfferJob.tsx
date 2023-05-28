@@ -8,7 +8,7 @@ const OfferJob = () => {
       <div className={s.blockFour_container}>
         <Fade direction={"right"} delay={500} duration={1200}>
           <h2>I am avaliable for a remote position</h2>
-          <button className={s.blockFour_button}>Press to make an offer</button>
+          {/*<button className={s.blockFour_button}>Press to make an offer</button>*/}
         </Fade>
       </div>
     </section>

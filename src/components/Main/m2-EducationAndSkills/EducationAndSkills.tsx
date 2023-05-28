@@ -32,9 +32,9 @@ const EducationAndSkills = () => {
                         <div className={s.blockTwo_skills}>
                             <h4>My skills</h4>
                             <p>
-                                I am a a Front-end Developer. I code and create web elements for
-                                amazing people around the world. I like work with new people.
-                                New people new Experiences.{" "}
+                                I am a Front-end Developer. I code and create web elements for
+                                amazing people around the world. I like to work with new people.
+                                New people - new Experiences.{" "}
                             </p>
                             <div>
                                 <Skill name={"REACT / REDAX/  REDUX-TOOLKIT"}/>
@@ -42,7 +42,7 @@ const EducationAndSkills = () => {
                                 <Skill name={"JAVA SCRIPT/ TYPE SCRIPT"}/>
                                 <Skill name={"UNIT TEST/ STORYBOOK"}/>
                                 <Skill name={"MATERIAL UI/ MANTINE"}/>
-                                <Skill name={"FORMIK "}/>
+                                <Skill name={"FORMIK"}/>
                                 <Skill name={"HTML/CSS"}/>
                             </div>
                         </div>
