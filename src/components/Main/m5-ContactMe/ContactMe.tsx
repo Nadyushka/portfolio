@@ -1,33 +1,51 @@
-import React, {FormEvent, useRef, useState} from "react";
+import React, {FormEvent, useState} from "react";
 import s from "./ContactMe.module.scss";
-import BlockTitle from "../../commonComponents/BlockTitle";
+import BlockTitle from "../../commonComponents/BlockTitle/BlockTitle";
 import {Fade} from "react-awesome-reveal";
 import emailjs from 'emailjs-com'
+import {Error} from "../../commonComponents/Error/Error";
+import {Loader} from "../../commonComponents/Loader/Loader";
+
 
 const ContactMe = () => {
 
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [message, setMessage] = useState<string>('')
+    const [messageInfo, setMessageInfo] = useState<string>('')
 
-    const form = useRef<any>()
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
+    const templateParams = {
+        user_name: name,
+        user_email: email,
+        message: message,
+    };
 
     const sendEmailHandler = (e: FormEvent<HTMLFormElement>) => {
+        setIsLoading(true)
         e.preventDefault()
-        emailjs.sendForm(
+        emailjs.send(
             process.env.REACT_APP_SERVICE_ID!,
             process.env.REACT_APP_TEMPLATE_ID!,
-            form.current,
+            templateParams,
             process.env.REACT_APP_USER_ID!)
             .then(res => {
-                e.currentTarget.reset()
-                console.log(res)
+                setMessageInfo('You message was successfully sent')
+                setName('')
+                setEmail('')
+                setMessage('')
             })
-            .catch(e => console.log(e.message))
+            .catch(e => {
+                setMessageInfo('Error occurred. Send you message again')
+            })
+            .finally(()=> setIsLoading(false))
     }
+
 
     return (
         <section className={s.blockFive} id={"contactMe"}>
+            {isLoading && <Loader/>}
             <Fade direction={"right"} delay={500} duration={1200}>
                 <div className={s.blockFive_container}>
                     <BlockTitle title={"GET IN TOUCH."}/>
@@ -40,10 +58,9 @@ const ContactMe = () => {
                             </p>
                         </div>
                         <div className={s.blockFive_right}>
-                            <form ref={form} className={s.blockFive_contactArea} onSubmit={sendEmailHandler}>
+                            <form className={s.blockFive_contactArea} onSubmit={sendEmailHandler}>
                                 <h4>Say something</h4>
                                 <input
-                                    name={'user_name'}
                                     className={s.input_name}
                                     placeholder={"Name"}
                                     type={"text"}
@@ -52,7 +69,6 @@ const ContactMe = () => {
                                     required={true}
                                 />
                                 <input
-                                    name={'user_email'}
                                     className={s.input_email}
                                     placeholder={"Email"}
                                     type={"email"}
@@ -61,7 +77,6 @@ const ContactMe = () => {
                                     required={true}
                                 />
                                 <textarea
-                                    name={'message'}
                                     className={s.input_message}
                                     placeholder={"Your message"}
                                     value={message}
@@ -75,6 +90,7 @@ const ContactMe = () => {
                         </div>
                     </div>
                 </div>
+                <Error errorMessage={messageInfo} clearMessageInfo={setMessageInfo}/>
             </Fade>
         </section>
     );

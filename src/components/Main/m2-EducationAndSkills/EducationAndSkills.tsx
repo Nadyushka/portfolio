@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./EducationAndSkills.module.scss";
 import Skill from "./Skill/Skill";
-import BlockTitle from "../../commonComponents/BlockTitle";
+import BlockTitle from "../../commonComponents/BlockTitle/BlockTitle";
 import Education from "./Educations/Education";
 import {Fade} from "react-awesome-reveal";
 
