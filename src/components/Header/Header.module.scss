@@ -1,6 +1,7 @@
 @import '../styles/sass/variables';
 @import '../styles/sass/mixins';
 
+
 .header {
   width: 250px;
   position: fixed;
@@ -148,6 +149,8 @@
         .header_socialMediaIcon {
           fill: $textColor;
           transition: 0.5s;
+          width: 30px !important;
+          height: 30px !important;
 
           &:hover {
             fill: $accentColor;
