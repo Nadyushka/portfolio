@@ -5,6 +5,7 @@
   padding: 10px;
   margin: 5px;
 
+
   @media (max-width: 900px) {
     flex: 1 1 100%;
   }
@@ -17,6 +18,12 @@
     background-position: center;
     position: relative;
     z-index: 1;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(110%, 110%);
+      transition: 0.5s;
+    }
 
     button {
       @media (max-width: 400px) {
@@ -41,7 +48,12 @@
       position: absolute;
       z-index: 5;
       top: 30%;
-      left: 40%;
+      transform: translate(-50%, -50%);
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
   }
 
