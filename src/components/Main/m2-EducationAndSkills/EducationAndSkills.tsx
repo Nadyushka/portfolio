@@ -37,13 +37,14 @@ const EducationAndSkills = () => {
                                 New people - new Experiences.{" "}
                             </p>
                             <div>
-                                <Skill name={"REACT / REDAX/  REDUX-TOOLKIT"}/>
-                                <Skill name={"AXIOS / REST API"}/>
+                                <Skill name={"VUE / NUXT /  VUEX / PINIA"}/>
+                                <Skill name={"REACT / REDAX /  REDUX-TOOLKIT"}/>
                                 <Skill name={"JAVA SCRIPT/ TYPE SCRIPT"}/>
+                                <Skill name={"AXIOS / REST API"}/>
                                 <Skill name={"UNIT TEST/ STORYBOOK"}/>
-                                <Skill name={"MATERIAL UI/ MANTINE"}/>
-                                <Skill name={"FORMIK"}/>
-                                <Skill name={"HTML/CSS"}/>
+                                <Skill name={"MATERIAL UI/ MANTINE / VUETIFY"}/>
+                                <Skill name={"FORMIK / VEE-VALIDATE"}/>
+                                <Skill name={"HTML / PUG / CSS"}/>
                             </div>
                         </div>
                     </div>
